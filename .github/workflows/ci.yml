@@ -1,0 +1,31 @@
+name: Tests and reproducibility
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python-version: ['3.11', '3.12']
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+      - name: Install project
+        run: python -m pip install -e .
+      - name: Run tests
+        run: python -m unittest discover -s tests -v
+      - name: Run command line demonstration
+        run: python -m minisom_colors train --iterations 100 --no-gif --output outputs/ci
+      - name: Query the saved model
+        run: python -m minisom_colors locate --model outputs/ci/color_map.npz --rgb 1 0 0

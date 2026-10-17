@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "config": {
+    "training_samples": 1000,
+    "test_samples": 500,
+    "width": 16,
+    "height": 16,
+    "iterations": 20000,
+    "sigma": 2.0,
+    "learning_rate": 0.5,
+    "seed": 42
+  },
+  "versions": {
+    "python": "3.12.14",
+    "minisom": "2.3.5",
+    "numpy": "2.3.5",
+    "matplotlib": "3.10.8",
+    "pillow": "12.3.0"
+  },
+  "training_samples": 1000,
+  "test_samples": 500,
+  "grid": [
+    16,
+    16
+  ],
+  "input_features": 3,
+  "iterations": 20000,
+  "seed": 42,
+  "sigma": 2.0,
+  "learning_rate": 0.5,
+  "before": {
+    "topographic_error": 0.976,
+    "quantization_error": 0.09619510380123106
+  },
+  "after": {
+    "topographic_error": 0.092,
+    "quantization_error": 0.09184821559659966
+  },
+  "query_rgb": [
+    1.0,
+    0.0,
+    0.0
+  ],
+  "winner_row_column": [
+    15,
+    2
+  ],
+  "winner_prototype_rgb": [
+    0.9143930391060234,
+    0.13248273321305362,
+    0.18480056780874352
+  ],
+  "distance": 0.24296394015478506,
+  "data_description": "Synthetic uniform RGB values in [0,1], no labels",
+  "evaluation": "Same held-out RGB vectors before and after training"
+}

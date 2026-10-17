@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "minisom-color-organization"
+version = "1.0.0"
+description = "A reproducible RGB color organization experiment using MiniSom"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{name = "Mohammad Azimi"}]
+dependencies = [
+    "minisom==2.3.5",
+    "numpy==2.3.5",
+    "matplotlib==3.10.8",
+    "Pillow==12.3.0",
+]
+
+[project.scripts]
+minisom-colors = "minisom_colors.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["minisom_colors*"]
