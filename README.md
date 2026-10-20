@@ -146,8 +146,6 @@ jupyter notebook demo.ipynb
 | --- | --- |
 | Report ready for submission | [MiniSom_Report.pdf](docs/MiniSom_Report.pdf) |
 | Editable report | [MiniSom_Report.docx](docs/MiniSom_Report.docx) |
-| English slide deck | [MiniSom_Practical_Task_3.pptx](docs/MiniSom_Practical_Task_3.pptx) |
-| English script, Persian explanations and questions | [MiniSom_Speaking_Guide.docx](docs/MiniSom_Speaking_Guide.docx) |
 
 ## Project files
 
